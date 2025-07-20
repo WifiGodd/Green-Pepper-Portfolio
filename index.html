@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Pepper - Web Development Portfolio</title>
+</head>
+<body>
+    <!-- Particles Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Green Pepper</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item active" data-page="home">Home</li>
+                <li class="nav-item" data-page="about">About</li>
+                <li class="nav-item" data-page="services">Services</li>
+                <li class="nav-item" data-page="portfolio">Portfolio</li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <div class="pages-container">
+        <!-- Home Page -->
+        <div class="page active" id="home">
+            <div class="home-container">
+                <h1 class="home-title">Green Pepper</h1>
+                <div class="home-buttons">
+                    <a href="https://discord.com/users/1336386780861173890" target="_blank" class="btn">Discord</a>
+                    <button class="btn" onclick="showPage('portfolio')">See My Work</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about">
+            <div class="container">
+                <h2 class="page-title">About Me</h2>
+                <div class="about-content">
+                    <p>This is a placeholder for the about section. You can add your personal information, background, skills, and experience here. Make it personal and engaging to connect with your potential clients and employers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Page -->
+        <div class="page" id="services">
+            <div class="container">
+                <h2 class="page-title">Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Frontend Development</h3>
+                        <p>Modern, responsive websites using HTML5, CSS3, JavaScript, and popular frameworks like React, Vue, and Angular.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>UI/UX Design</h3>
+                        <p>Beautiful, user-friendly interfaces that provide excellent user experience and drive conversions.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-first approach ensuring your website looks perfect on all devices and screen sizes.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Web Optimization</h3>
+                        <p>Performance optimization, SEO, and accessibility improvements to boost your online presence.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>E-commerce Solutions</h3>
+                        <p>Complete online store development with shopping carts, payment integration, and inventory management.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Maintenance & Support</h3>
+                        <p>Ongoing website maintenance, updates, and technical support to keep your site running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Page -->
+        <div class="page" id="portfolio">
+            <div class="container">
+                <h2 class="page-title">My Work</h2>
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Projects will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-image" id="modal-image">Project Preview</div>
+            <h3 id="modal-title">Project Title</h3>
+            <p id="modal-description">Project description will appear here...</p>
+            <h4 style="margin-top: 1rem; color: #00FF00;">Client Review:</h4>
+            <p id="modal-review">Client review will appear here...</p>
+        </div>
+    </div>
+  </body>
+</html>
